@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
   * insert_node - function in C that inserts a
   * number into a sorted singly linked list.
@@ -7,37 +6,43 @@
   * @number: number to be inserted in the list.
   * Return: the address of the new node, or NULL if it failed
   */
-
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *ptr = *head;
-	listint_t *node;
+	listint_t *node = *head;
+	listint_t *new_node = NULL;
 
-	node = malloc(sizeof(listint_t));
-	if (node == NULL)
-	{
-		free(node);
+	/* crear el nodo */
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
 		return (NULL);
-	}
-	node->n = number;
-	/*If the node is the first node to the list*/
-	if (ptr == NULL || number <= 0)
+	new_node->n = number;
+
+	if (*head == NULL)
 	{
-		node->next = ptr;
-		*head = node;
-		return (node);
+		*head = new_node;
+		return (new_node);
 	}
-	while (ptr->next != NULL)
+
+	if (node->n > number)
 	{
-		if (ptr->next->n >= number)
+		new_node->next = node;
+		*head = new_node;
+		return (new_node);
+	}
+
+	/* validar la posicion donde ubicarlo */
+	while (node->next != NULL)
+	{
+		/* si encuentra la posicion */
+		if (node->next->n > number)
 		{
-			node->next = ptr->next;
-			ptr->next = node;
-			return (node);
+			new_node->next = node->next;
+			node->next = new_node;
+			return (new_node);
 		}
-		ptr = ptr->next;
+		node = node->next;
 	}
-	ptr->next = node;
-	node->next = NULL;
-	return (node);
+	new_node->next = node->next;
+	node->next = new_node;
+	return (new_node);
 }
