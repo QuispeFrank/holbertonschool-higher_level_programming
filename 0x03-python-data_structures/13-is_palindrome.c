@@ -64,7 +64,12 @@ int is_palindrome(listint_t **head)
 	int palindrome = 0;
 
 	/* un solo elemento es palindrome */
+	if (*head == NULL)
+		return (0);
+
 	list_len = listint_len(*head);
+	if (list_len == 0)
+		return (0);
 	if (list_len == 1)
 		return (1);
 
