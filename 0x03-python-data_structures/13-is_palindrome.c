@@ -9,7 +9,6 @@
  */
 int check_palindrome(listint_t **head, listint_t *last)
 {
-	/* condicion de break */
 	if (last->next != NULL)
 	{
 		if (check_palindrome(head, last->next) == 0)
@@ -33,7 +32,7 @@ int check_palindrome(listint_t **head, listint_t *last)
 int is_palindrome(listint_t **head)
 {
 	if (head == NULL || *head == NULL)
-		return (0);
+		return (1);
 
 	return (check_palindrome(head, *head));
 }
