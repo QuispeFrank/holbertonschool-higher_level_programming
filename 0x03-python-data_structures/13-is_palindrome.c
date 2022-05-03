@@ -9,11 +9,13 @@
  */
 int check_palindrome(listint_t **head, listint_t *last)
 {
+	/* stop condition */
 	if (last->next != NULL)
 	{
 		if (check_palindrome(head, last->next) == 0)
 			return (0);
 	}
+	/* compare */
 	if ((*head)->n == last->n)
 	{
 		*head = (*head)->next;
