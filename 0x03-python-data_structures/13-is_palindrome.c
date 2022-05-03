@@ -31,7 +31,7 @@ int check_palindrome(listint_t **head, listint_t *last)
 
 int is_palindrome(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (1);
 
 	return (check_palindrome(head, *head));
