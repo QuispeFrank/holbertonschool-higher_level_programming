@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A square is here"""
+
+
 class Square:
-    """Empty class square"""
+    """An empty class square"""
     pass
