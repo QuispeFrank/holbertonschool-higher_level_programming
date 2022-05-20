@@ -37,9 +37,9 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Prints a square"""
+        """prints a square"""
         for row in range(self.__size):
-            for dist in range(self.__size):
-                print("#", end="" if self.__size - 1 != dist else "\n")
+            [print("#", end="") for col in range(self.__size)]
+            print("")
         if self.__size == 0:
             print("")
