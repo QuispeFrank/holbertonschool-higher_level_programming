@@ -72,7 +72,7 @@ class Square:
 
     def my_print(self):
         """Prints a square"""
-        [print("") for pos_y in range(self.__position[1])]
+        [print("") for pos_y in range(self.__position[1]) if self.__size != 0]
         for row in range(self.__size):
             [print(end=" ") for pos_x in range(self.__position[0])]
             [print(end="#") for col in range(self.__size)]
