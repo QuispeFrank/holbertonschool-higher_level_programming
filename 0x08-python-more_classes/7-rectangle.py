@@ -69,7 +69,7 @@ class Rectangle:
             with the character '#'
         """
         if self.__height * self.__width != 0:
-            symbol = str(Rectangle.print_symbol)
+            symbol = str(self.print_symbol)
             return ((symbol * self.__width + '\n') * self.__height)[:-1]
         else:
             return ''
