@@ -1,0 +1,150 @@
+
+""" test n°1 - import """
+---------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+
+""" test n°2 """
+	a -> positive integer.
+	b -> positive integer.
+---------------------
+>>> add_integer(1, 2)
+3
+
+
+
+""" test n°3 """
+	a -> positive integer.
+	b -> negative integer.
+---------------------
+>>> add_integer(100, -2)
+98
+
+
+
+""" test n°4 """
+	a -> positive integer.
+	b -> nothing.
+---------------------
+>>> add_integer(2)
+100
+
+
+
+""" test n°5 """
+	a -> positive float.
+	b -> negative integer.
+---------------------
+>>> add_integer(100.3, -2)
+98
+
+
+
+""" test n°6 """
+	a -> positive number.
+	b -> string.
+---------------------
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+
+""" test n°7 """
+	a -> None.
+	b -> Nothing.
+---------------------
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+
+""" test n°8 """
+	a -> float("inf").
+	b -> Nothing.
+---------------------
+>>> add_integer(float("inf"))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+
+""" test n°9 """
+	a -> integer.
+	b -> float("inf").
+---------------------
+>>> add_integer(1, float("inf"))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+
+""" test n°10 """
+	a -> float("nan").
+	b -> Nothing.
+---------------------
+>>> add_integer(float("nan"))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+
+
+""" test n°11 """
+	a -> integer.
+	b -> float("nan").
+---------------------
+>>> add_integer(1, float("nan"))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+
+
+""" test n°12 """
+	a -> Nothing.
+	b -> Nothing.
+---------------------
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+
+""" test n°13 """
+	a -> list.
+	b -> integer.
+---------------------
+>>> add_integer([1, 2 ,3], 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+
+""" test n°14 """
+	a -> integer.
+	b -> list.
+---------------------
+>>> add_integer(1, [1, 2 ,3])
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+
+""" test n°15 """
+	a -> tuple.
+	b -> integer.
+---------------------
+>>> add_integer((1, 2, 3), 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+
+""" test n°16 """
+	a -> integer.
+	b -> tuple.
+---------------------
+>>> add_integer(1, (1, 2, 3))
+Traceback (most recent call last):
+TypeError: b must be an integer

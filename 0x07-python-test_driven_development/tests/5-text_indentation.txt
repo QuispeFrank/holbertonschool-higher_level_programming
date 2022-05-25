@@ -1,0 +1,46 @@
+
+""" test n°1 - import """
+---------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+
+""" test n°2 """
+	text -> string.
+---------------------
+>>> text_indentation("Hola. Mundo? Caótico: Adios!")
+Hola.
+<BLANKLINE>
+Mundo?
+<BLANKLINE>
+Caótico:
+<BLANKLINE>
+Adios!
+
+
+
+""" test n°2 """
+	text -> Nothing.
+---------------------
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+
+""" test n°3 """
+	text -> integer.
+---------------------
+>>> text_indentation(69)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+
+""" test n°4 """
+	text -> string.
+	additional -> string.
+---------------------
+>>> text_indentation("Hola", "Mundo")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
