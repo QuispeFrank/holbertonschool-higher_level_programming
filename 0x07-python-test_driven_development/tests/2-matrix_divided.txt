@@ -118,3 +118,12 @@ TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' an
 >>> matrix_divided(matrix, )
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+""" test n°13 - div inf """
+	matrix -> list of list.
+	div -> inf.
+---------------------
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
