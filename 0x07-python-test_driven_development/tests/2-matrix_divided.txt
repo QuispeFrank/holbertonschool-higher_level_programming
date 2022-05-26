@@ -127,3 +127,6 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
 >>> matrix_divided(matrix, float('inf'))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+
