@@ -65,12 +65,6 @@ IndexError: list index out of range
 
 
 
-	>>> my_list = MyList((float('inf'), 4, float('nan'), 0, None))
-	>>> my_list
-	[inf, 4, nan, 0, None]
-	>>> my_list.print_sorted()
-	Traceback (most recent call last):
-	TypeError: '<' not supported between instances of 'NoneType' and 'float'
 	>>> my_list = MyList('4', '3', 0, '1')
 	Traceback (most recent call last):
 	TypeError: list expected at most 1 argument, got 4
