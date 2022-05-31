@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" My int module """
+"""Class MyInt"""
 
 
 class MyInt(int):
-    """ class MyInt """
+    """Reverse"""
 
-    def eq(self, other):
-        return super().ne(other)
+    def __eq__(self, other):
+        return super().__ne__(other)
 
-    def ne(self, other):
-        return super().eq(other)
+    def __ne__(self, other):
+        return super().__eq__(other)
