@@ -70,3 +70,34 @@ IndexError: list index out of range
 >>> my_list = MyList({'key1': 'value1', 'key2': 'value2'})
 >>> my_list
 ['key1', 'key2']
+
+
+
+	>>> my_list = MyList(('4', '3', '0', '1'))
+	>>> my_list
+	['4', '3', '0', '1']
+	>>> my_list.print_sorted()
+	['0', '1', '3', '4']
+	>>> my_list = MyList((True, False))
+	>>> my_list
+	[True, False]
+	>>> my_list.print_sorted()
+	[False, True]
+	>>> my_list = MyList({'key1': 'value1', 'key2': 'value2'})
+	>>> my_list
+	['key1', 'key2']
+	>>> my_list.print_sorted()
+	['key1', 'key2']
+	>>> my_list = MyList((float('inf'), 4, float('nan'), 0, None))
+	>>> my_list
+	[inf, 4, nan, 0, None]
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	TypeError: '<' not supported between instances of 'NoneType' and 'float'
+	>>> my_list = MyList('4', '3', 0, '1')
+	Traceback (most recent call last):
+	TypeError: list expected at most 1 argument, got 4
+	>>> my_list = MyList(('4', '3', 0, '1'))
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+  	TypeError: '<' not supported between instances of 'int' and 'str'
