@@ -81,6 +81,15 @@ Traceback (most recent call last):
 TypeError: '<' not supported between instances of 'str' and 'int'
 
 
+""" test n°11 """
+---------------------
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+
+
+
+>>> my_list = MyList()
+>>> print(my_list.print_sorted)
+<bound method MyList.print_sorted of []>
