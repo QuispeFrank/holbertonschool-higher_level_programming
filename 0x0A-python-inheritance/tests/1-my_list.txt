@@ -75,3 +75,7 @@ TypeError: list expected at most 1 argument, got 4
 
 """ test n°10 """
 ---------------------
+>>> my_list = MyList([1, "Betty", "Holberton", 5])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
