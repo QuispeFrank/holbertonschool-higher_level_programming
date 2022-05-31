@@ -12,13 +12,10 @@
 
 >>> bg = BaseGeometry(None)
 Traceback (most recent call last):
-TypeError: object() takes no parameters
+TypeError: BaseGeometry() takes no arguments
 
 ::
 
->>> bg = BaseGeometry()
->>> print(bg.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
-<bound method BaseGeometry.area of <7-base_geometry.BaseGeometryobject at...>>
 
 ::
 
