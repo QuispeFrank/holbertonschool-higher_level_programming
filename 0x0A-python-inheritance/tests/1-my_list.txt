@@ -8,8 +8,6 @@
 """ test n°2 """
 ---------------------
 >>> my_list = MyList()
->>> print(my_list)
-[]
 
 
 
