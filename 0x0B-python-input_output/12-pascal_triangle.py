@@ -3,24 +3,11 @@
 of integers representing the Pascal’s triangle of"""
 
 
-def pascal_triangle(n):
+def pascal_triangle(num):
     """Returns a list of integers
         n : number of triangle size
     """
-
-    if n <= 0:
-        return []
-    if n == 1:
-        return [[1]]
-    if n == 2:
-        return [[1], [1, 1]]
-
-    tr_p = [[1], [1, 1]]
-
-    for i in range(2, n):
-        lista = [1]
-        for j in range(1, i):
-            lista.append(tr_p[i-1][j-1] + tr_p[i-1][j])
-        lista.append(1)
-        tr_p.append(lista)
-    return(tr_p)
+    p = [[1]]
+    for r in range(1, num):
+        p.append([1] + [p[r-1][n-1] + p[r-1][n] for n in range(1, r)] + [1])
+    return p
