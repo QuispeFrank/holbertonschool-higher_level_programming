@@ -8,4 +8,4 @@ def from_json_string(my_str):
         (Python data structure) represented
         by a JSON string
     """
-    return (json.loads(my_obj))
+    return (json.loads(my_str))
