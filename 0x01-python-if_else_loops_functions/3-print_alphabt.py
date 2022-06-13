@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    if(chr(i) != 'e' and chr(i) != 'q'):
-        print(chr(i), end="")
+""" When I was having that alphabet soup,
+    I never thought that it would pay off.
+"""
+
+
+for letter in range(ord('a'), ord('z') + 1):
+    if(chr(letter) != 'e' and chr(letter) != 'q'):
+        print(chr(letter), end='')
