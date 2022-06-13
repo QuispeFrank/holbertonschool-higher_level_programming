@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-for i in range(0, 99):
-    print("{}{}, ".format(i // 10, i % 10), end="")
-print("99")
+""" 00...99 """
+
+
+for number in range(0, 100):
+    print(f'{number:02}', end=', ' if number < 99 else '\n')
