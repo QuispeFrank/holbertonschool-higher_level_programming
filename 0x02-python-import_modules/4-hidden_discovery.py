@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+""" Who are you? """
+
+
 if __name__ == "__main__":
     import hidden_4
-    list = (dir(hidden_4))
-    for i in range(len(list)):
-        if(list[i][0] != "_" and list[i][1] != "_"):
-            print(list[i])
+
+    attributes = dir(hidden_4)
+    for attr in attributes:
+        print(end=attr + '\n' if attr[:2] != '__' else '')
