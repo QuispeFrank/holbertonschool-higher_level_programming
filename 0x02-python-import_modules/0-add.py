@@ -4,4 +4,5 @@
 
 if __name__ == "__main__":
     import add_0 as module
-    print(f'1 + 2 = {module.add(1, 2)}')
+    a, b = 1, 2
+    print(f'{a} + {b} = {module.add(a, b)}')
