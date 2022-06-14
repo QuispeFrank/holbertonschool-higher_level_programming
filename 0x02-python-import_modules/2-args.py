@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import sys
-    # tamaño del argv
-    args = len(sys.argv) - 1
-    if args == 0:
-        print(f"{args} arguments.")
-    elif args == 1:
-        print(f"{args} argument:")
-    else:
-        print(f"{args} arguments:")
+""" How to make a script dynamic! """
 
-    for i in range(1, args + 1):
-        print(f"{i}: {sys.argv[i]}")
+
+if __name__ == "__main__":
+    from sys import argv
+
+    if len(argv) == 1:
+        print(f'0 arguments.')
+    elif len(argv) == 2:
+        print(f'1 argument:')
+    else:
+        print(f'{len(argv) - 1} arguments:')
+
+    for index in range(1, len(argv)):
+        print(f'{index}: {argv[index]}')
