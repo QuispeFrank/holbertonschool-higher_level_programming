@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+""" To uppercase """
+
+
 def uppercase(str):
-    for i in str:
-        asci = chr(ord(i) - 32)
-        print(f"{asci if ord(i) >= 97 and ord(i) <= 122 else i}", end="")
-    print("")
+    """ prints a string in uppercase followed by a new line """
+    for c in str:
+        c = chr(ord(c) - 32) if ord(c) in range(97, 123) else c
+        print(c, end='')
+    print('')
