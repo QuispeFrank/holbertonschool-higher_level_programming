@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Lists of lists = Matrix """
+
+
 def print_matrix_integer(matrix=[[]]):
-    if isinstance(matrix, list) is True:
+    """ prints a matrix of integers """
+    if isinstance(matrix, list):
         for row in matrix:
-            for item in row:
-                print("{:d}".format(item), end=" " if item != row[-1] else "")
-            print()
+            print(' '.join(map(lambda e: ascii(e), row)))
