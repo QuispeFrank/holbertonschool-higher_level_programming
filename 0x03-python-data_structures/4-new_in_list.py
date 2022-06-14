@@ -8,6 +8,6 @@ def new_in_list(my_list, idx, element):
     """
     if isinstance(my_list, list):
         newlist = my_list.copy()
-        if idx in range(0, len(mylist)):
+        if idx in range(0, len(my_list)):
             newlist[idx] = element
         return(newlist)
