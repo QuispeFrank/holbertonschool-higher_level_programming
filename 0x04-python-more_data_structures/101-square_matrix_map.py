@@ -1,3 +1,7 @@
 #!/usr/bin/python3
+""" Squared by using map """
+
+
 def square_matrix_map(matrix=[]):
-    return list(map(lambda vect: list(map(lambda i: i ** 2, vect)), matrix))
+    """ computes the square value of all integers of a matrix using map """
+    return list(map(lambda row: list(map(lambda n: n ** 2, row)), matrix))
