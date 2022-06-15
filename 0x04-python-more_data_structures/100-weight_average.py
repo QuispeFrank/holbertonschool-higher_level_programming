@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+""" Weighted average! """
+
+
 def weight_average(my_list=[]):
-    if my_list == []:
-        return 0
-    suma, div = (0, 0)
-    for score in my_list:
-        suma += score[0] * score[1]
-        div += score[1]
-    return suma / div
+    """ returns the weighted average of all integers tuple
+        (<score>, <weight>)
+    """
+    if my_list:
+        return sum(k * v for k, v in my_list) / sum(v for k, v in my_list)
