@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Unique addition """
+
+
 def uniq_add(my_list=[]):
-    sets = {item for item in my_list}
-    suma = 0
-    for item in sets:
-        suma += item
-    return suma
+    """ adds all unique integers in a list
+        (only once for each integer)
+    """
+    return sum({n for n in my_list})
