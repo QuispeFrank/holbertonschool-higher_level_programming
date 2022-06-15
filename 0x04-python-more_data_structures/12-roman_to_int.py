@@ -20,7 +20,9 @@ def roman_to_int(roman_string):
     romans = list(roman_string)
     num = 0
     for i in range(len(romans)):
-        if (i <= len(romans) - 1) and r_dic[romans[i]] >= r_dic[romans[i + 1]]:
+        if (i != len(romans) - 1) and r_dic[romans[i]] >= r_dic[romans[i + 1]]:
+            num = num + r_dic[romans[i]]
+        elif i == len(romans) - 1:
             num = num + r_dic[romans[i]]
         else:
             num = num - r_dic[romans[i]]
