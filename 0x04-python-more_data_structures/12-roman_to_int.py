@@ -6,8 +6,6 @@ def roman_to_int(roman_string):
     """ converts a Roman numeral to an integer """
     if not isinstance(roman_string, str):
         return 0
-    if not len(roman_string):
-        return None
 
     r_dic = {
         'I': 1,
