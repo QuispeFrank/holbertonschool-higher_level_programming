@@ -1,11 +1,24 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string):
-    if isinstance(roman_string, str) is False:
-        return 0
+""" Roman to Integer """
 
-    r_dic = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    if len(roman_string) == 0:
+
+def roman_to_int(roman_string):
+    """ converts a Roman numeral to an integer """
+    if not isinstance(roman_string, str):
+        return 0
+    if not len(roman_string):
         return None
+
+    r_dic = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
     romans = list(roman_string)
     num = 0
     for i in range(len(romans)):
