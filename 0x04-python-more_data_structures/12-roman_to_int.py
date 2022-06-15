@@ -17,8 +17,9 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    romans = list(roman_string)
     num = 0
+    romans = list(roman_string)
+
     for i in range(len(romans)):
         if (i != len(romans) - 1) and r_dic[romans[i]] >= r_dic[romans[i + 1]]:
             num = num + r_dic[romans[i]]
