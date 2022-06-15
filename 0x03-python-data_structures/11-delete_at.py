@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" Delete at """
+
+
 def delete_at(my_list=[], idx=0):
-    if idx >= 0 and idx < len(my_list):
-        my_list[idx: idx + 1] = []
-    return my_list
+    """ deletes the item at a specific position in a list """
+    if idx in range(len(my_list)):
+        del my_list[idx]
+    return (my_list)
