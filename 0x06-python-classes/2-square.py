@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Square with size """
+""" Size validation """
 
 
 class Square:
@@ -7,7 +7,7 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """ inits the square instance.
+        """ inits the square with size validation.
 
         Args:
             size: (int) size of the square.
