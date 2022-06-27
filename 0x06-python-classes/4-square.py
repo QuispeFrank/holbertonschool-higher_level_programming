@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A square is here"""
+""" Access and update private attribute """
 
 
 class Square:
