@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" ByteCode -> Python #4 """
+
+
 def magic_calculation(a, b):
     result = 0
     for i in range(1, 3):
