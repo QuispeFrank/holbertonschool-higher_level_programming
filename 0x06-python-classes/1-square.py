@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""A square is here"""
+""" Square with size """
 
 
 class Square:
-    """I'm a square class.
-
-    Attributes:
-        __size: square side size.
+    """ class Square.
     """
 
     def __init__(self, size=None):
-        """Inits Square with size."""
+        """ inits the Square instance.
+
+        Args:
+            size: size of the square.
+        """
         if size is not None:
             self.__size = size
