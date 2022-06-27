@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""A square is here"""
+""" My first square """
 
 
 class Square:
-    """I'm an empty class: square"""
+    """ an empty class Square that defines a square
+    """
     pass
