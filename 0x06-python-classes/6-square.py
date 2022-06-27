@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A square is here"""
+""" Coordinates of a square """
 
 
 class Square:
