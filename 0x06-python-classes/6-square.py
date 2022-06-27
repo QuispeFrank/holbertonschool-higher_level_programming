@@ -74,4 +74,4 @@ class Square:
         if s == 0:
             y = 0
 
-        print(('\n' * y + ('_' * x + '#' * s + '\n') * s)[:-1])
+        print(('\n' * y + (' ' * x + '#' * s + '\n') * s)[:-1])
