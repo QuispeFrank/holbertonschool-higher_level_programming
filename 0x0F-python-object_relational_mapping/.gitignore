@@ -1,0 +1,4 @@
+pydope
+*.sql
+./trash
+./trash/*
